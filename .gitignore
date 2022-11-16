@@ -1,0 +1,7 @@
+.venv
+.python-local
+.env
+*.sqlite3
+__pycache__
+
+.python-version
