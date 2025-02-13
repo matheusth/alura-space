@@ -4,6 +4,8 @@ from galeria.models import Fotografia
 # Create your views here.
 def index(request):
     fotografias = Fotografia.objects.order_by('-data_fotografia').filter(publicada=True)
+    if 'categoria' in request.GET:
+        fotografias = fotografias.filter(categoria=request.GET['categoria'])
     return render(request, 'galeria/index.html', {"cards": fotografias})
 
 def imagem(request, foto_id):

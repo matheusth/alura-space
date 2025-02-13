@@ -476,7 +476,7 @@ table {
 	display: flex;
 }
 
-.tags__tag {
+.tags__tag a {
 	background-color: #D9D9D930;
 	margin-right: 1.5rem;
 	border-radius: 8px;
@@ -484,9 +484,11 @@ table {
 	width: 100px;
 	text-align: center;
 	border: 2px solid transparent;
+	color: #FFFFFF;
+	text-decoration: none;
 }
 
-.tags__tag:hover {
+.tags__tag a:hover {
 	border: 2px solid #7B78E5;
 	cursor: pointer;
 }
