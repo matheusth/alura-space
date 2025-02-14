@@ -2,10 +2,6 @@ from django import forms
 
 
 class LoginForms(forms.Form):
-    """
-    Form de login
-    """
-
     nome_login = forms.CharField(
         label="Nome de login",
         required=True,
@@ -31,10 +27,6 @@ class LoginForms(forms.Form):
 
 
 class CadastroForms(forms.Form):
-    """
-    Formalario do cadastro de usuarios.
-    """
-
     nome_cadastro = forms.CharField(
         label="Nome de cadastro",
         required=True,
