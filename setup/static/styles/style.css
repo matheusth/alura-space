@@ -496,6 +496,9 @@ table {
 .alert {
 	display: flex;
 	text-align: center;
+	padding: 1em;
+	margin-bottom: 1em;
+	border-radius: 10px;
 }
 
 .alert-primary {
@@ -506,6 +509,7 @@ table {
 .row {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	width: 100%;
 }
 
@@ -516,6 +520,7 @@ table {
 
 .form-control {
 	width: 100%;
+	box-sizing: border-box;
 	height: 2em;
 	margin-bottom: 1rem;
 	background-color: transparent;
@@ -532,4 +537,32 @@ table {
 	border-color: mediumpurple;
 	box-shadow: white inset 0 0 1px;
 	transition: 200ms linear all;
+}
+
+.btn-container {
+	box-sizing: border-box;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+.btn {
+	box-sizing: border-box;
+	height: 2rem;
+	width: 100%;
+	font-weight: bold;
+	border-radius: 5px;
+	border: none;
+}
+
+.btn-success {
+	background-color: mediumpurple;
+	color: white;
+}
+
+.btn-success:hover {
+	transition: 200ms linear all;
+	background-color: rebeccapurple;
 }
