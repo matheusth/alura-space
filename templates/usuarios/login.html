@@ -6,7 +6,10 @@
         <main class="principal">
             {% include "galeria/partials/_menu.html" %}
             <section class="galeria" style="margin-left: 5em">
-                <form action="{% url 'login' %}" method="POST">
+                <form action="{% url 'login' %}"
+                      method="POST"
+                      autocomplete="off"
+                      class="user_form">
                     {% csrf_token %}
                     <div class="row">
                         {% for mensagem in messages %}
@@ -15,12 +18,10 @@
                             </div>
                         {% endfor %}
                         {% for field in form.visible_fields %}
-                            <div class="col-12 col-lg-12" style="margin-bottom: 10px;">
-                                <label for="{{ field.id_for_label }}"
-                                       style="color:#D9D9D9;
-                                              margin-bottom: 5px">{{ field.label }}</label>
-                                {{ field }}
-                            </div>
+                            <label for="{{ field.id_for_label }}"
+                                   style="color:#D9D9D9;
+                                          margin-bottom: 5px">{{ field.label }}</label>
+                            {{ field }}
                         {% endfor %}
                         <div class="col-12 text-center">
                             <button class="btn btn-success col-12" style="padding: top 5px" type="submit">Login</button>
