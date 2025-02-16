@@ -2,9 +2,9 @@
 {% load static %}
 {% block content %}
     <div class="pagina-inicial">
-        {% include "galeria/partials/_header.html" %}
+        {% include "partials/_header.html" %}
         <main class="principal">
-            {% include "galeria/partials/_menu.html" %}
+            {% include "partials/_menu.html" %}
             <section class="galeria" style="margin-left: 5em">
                 <form action="{% url 'login' %}"
                       method="POST"
@@ -12,11 +12,7 @@
                       class="user_form">
                     {% csrf_token %}
                     <div class="row">
-                        {% for mensagem in messages %}
-                            <div class="alert alert-primary">
-                                <p class="mensagem">{{ mensagem }}</p>
-                            </div>
-                        {% endfor %}
+                        {% include "partials/_alertas.html" %}
                         {% for field in form.visible_fields %}
                             <label for="{{ field.id_for_label }}"
                                    style="color:#D9D9D9;

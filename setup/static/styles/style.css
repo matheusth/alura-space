@@ -501,9 +501,14 @@ table {
 	border-radius: 10px;
 }
 
-.alert-primary {
+.alert-success {
 	color: #FFFFFF;
 	background-color: teal;
+}
+
+.alert-error {
+	color: #FFFFFF;
+	background-color: orangered;
 }
 
 .row {
